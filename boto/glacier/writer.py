@@ -140,6 +140,7 @@ class Writer(object):
                                                  hex_tree_hash,
                                                  content_range, part)
         self._uploaded_size += len(part)
+        response.read()
 
     def write(self, str):
         if self.closed:
